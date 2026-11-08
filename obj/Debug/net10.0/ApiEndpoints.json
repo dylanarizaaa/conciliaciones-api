@@ -1,0 +1,119 @@
+[
+  {
+    "ContainingType": "Conciliaciones.API.Controllers.ConciliacionesController",
+    "Method": "ObtenerProcesos",
+    "RelativePath": "api/v1/Conciliaciones/procesos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proyectoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Conciliaciones.API.Models.RespuestaApi\u00601[[Conciliaciones.API.Models.ResultadoListaConTotales\u00601[[Conciliaciones.API.Models.ProcesoDto, Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Conciliaciones.API.Controllers.ConciliacionesController",
+    "Method": "ObtenerProyectos",
+    "RelativePath": "api/v1/Conciliaciones/proyectos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Conciliaciones.API.Models.RespuestaApi\u00601[[Conciliaciones.API.Models.ResultadoLista\u00601[[Conciliaciones.API.Models.ProyectoDto, Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Conciliaciones.API.Controllers.ConciliacionesController",
+    "Method": "ObtenerSubProcesos",
+    "RelativePath": "api/v1/Conciliaciones/subprocesos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdProcess",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Conciliaciones.API.Models.RespuestaApi\u00601[[Conciliaciones.API.Models.ResultadoListaConTotales\u00601[[Conciliaciones.API.Models.SubProcesoDto, Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Conciliaciones.API.Controllers.ConciliacionesController",
+    "Method": "ObtenerReglasSubProceso",
+    "RelativePath": "api/v1/Conciliaciones/subprocesos/reglas/{subProcesoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subProcesoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Conciliaciones.API.Models.RespuestaApi\u00601[[Conciliaciones.API.Models.ResultadoDato\u00601[[Conciliaciones.API.Models.ResultadoPaginado\u00601[[Conciliaciones.API.Models.ReglaDto, Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Conciliaciones.API.Models.RespuestaApi\u00601[[Conciliaciones.API.Models.ResultadoDato\u00601[[Conciliaciones.API.Models.ResultadoPaginado\u00601[[Conciliaciones.API.Models.ReglaDto, Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Conciliaciones.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  }
+]

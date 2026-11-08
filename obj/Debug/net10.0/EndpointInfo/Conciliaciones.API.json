@@ -1,0 +1,633 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "Conciliaciones.API | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5241"
+    }
+  ],
+  "paths": {
+    "/api/v1/Conciliaciones/proyectos": {
+      "get": {
+        "tags": [
+          "Conciliaciones"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaOfProyectoDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaOfProyectoDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaOfProyectoDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Conciliaciones/procesos": {
+      "get": {
+        "tags": [
+          "Conciliaciones"
+        ],
+        "parameters": [
+          {
+            "name": "proyectoId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaConTotalesOfProcesoDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaConTotalesOfProcesoDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaConTotalesOfProcesoDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Conciliaciones/subprocesos": {
+      "get": {
+        "tags": [
+          "Conciliaciones"
+        ],
+        "parameters": [
+          {
+            "name": "IdProcess",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaConTotalesOfSubProcesoDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaConTotalesOfSubProcesoDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoListaConTotalesOfSubProcesoDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Conciliaciones/subprocesos/reglas/{subProcesoId}": {
+      "get": {
+        "tags": [
+          "Conciliaciones"
+        ],
+        "parameters": [
+          {
+            "name": "subProcesoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProcesoDto": {
+        "type": "object",
+        "properties": {
+          "procesoId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombreProceso": {
+            "type": "string"
+          },
+          "monto": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "cantidad": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "ProyectoDto": {
+        "type": "object",
+        "properties": {
+          "proyectoId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombreProyecto": {
+            "type": "string"
+          },
+          "monto": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "cantidad": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "ReglaDto": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "casos": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "monto": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          }
+        }
+      },
+      "RespuestaApiOfResultadoDatoOfResultadoPaginadoOfReglaDto": {
+        "type": "object",
+        "properties": {
+          "codigoEstado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "respuestaEstado": {
+            "type": "boolean"
+          },
+          "mensaje": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "errores": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mensajeError": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resultado": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ResultadoDatoOfResultadoPaginadoOfReglaDto"
+              }
+            ]
+          }
+        }
+      },
+      "RespuestaApiOfResultadoListaConTotalesOfProcesoDto": {
+        "type": "object",
+        "properties": {
+          "codigoEstado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "respuestaEstado": {
+            "type": "boolean"
+          },
+          "mensaje": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "errores": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mensajeError": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resultado": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ResultadoListaConTotalesOfProcesoDto"
+              }
+            ]
+          }
+        }
+      },
+      "RespuestaApiOfResultadoListaConTotalesOfSubProcesoDto": {
+        "type": "object",
+        "properties": {
+          "codigoEstado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "respuestaEstado": {
+            "type": "boolean"
+          },
+          "mensaje": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "errores": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mensajeError": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resultado": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ResultadoListaConTotalesOfSubProcesoDto"
+              }
+            ]
+          }
+        }
+      },
+      "RespuestaApiOfResultadoListaOfProyectoDto": {
+        "type": "object",
+        "properties": {
+          "codigoEstado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "respuestaEstado": {
+            "type": "boolean"
+          },
+          "mensaje": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "errores": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mensajeError": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "resultado": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ResultadoListaOfProyectoDto"
+              }
+            ]
+          }
+        }
+      },
+      "ResultadoDatoOfResultadoPaginadoOfReglaDto": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ResultadoPaginadoOfReglaDto"
+              }
+            ]
+          }
+        }
+      },
+      "ResultadoListaConTotalesOfProcesoDto": {
+        "type": "object",
+        "properties": {
+          "totalAfectado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "casosTotales": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProcesoDto"
+            }
+          }
+        }
+      },
+      "ResultadoListaConTotalesOfSubProcesoDto": {
+        "type": "object",
+        "properties": {
+          "totalAfectado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "casosTotales": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubProcesoDto"
+            }
+          }
+        }
+      },
+      "ResultadoListaOfProyectoDto": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProyectoDto"
+            }
+          }
+        }
+      },
+      "ResultadoPaginadoOfReglaDto": {
+        "type": "object",
+        "properties": {
+          "casosTotales": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "montoAfectado": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "pageNumber": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "pageSize": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "totalPages": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReglaDto"
+            }
+          }
+        }
+      },
+      "SubProcesoDto": {
+        "type": "object",
+        "properties": {
+          "subProcesoId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombreSubProceso": {
+            "type": "string"
+          },
+          "monto": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "cantidad": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Conciliaciones"
+    }
+  ]
+}
