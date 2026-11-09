@@ -18,14 +18,6 @@ public class RespuestaApi<T>
         Resultado = resultado
     };
 
-    public static RespuestaApi<T> Creado(T resultado, string? mensaje = null) => new()
-    {
-        CodigoEstado = StatusCodes.Status201Created,
-        RespuestaEstado = true,
-        Mensaje = mensaje,
-        Resultado = resultado
-    };
-
     public static RespuestaApi<T> Error(int codigoEstado, string mensajeError, params string[] errores) => new()
     {
         CodigoEstado = codigoEstado,
