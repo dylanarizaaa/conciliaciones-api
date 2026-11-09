@@ -1,14 +1,20 @@
 {
   "pageNumber": 1,
   "pageSize": 10,
-  "totalRows": 10,
-  "totalPages": 1,
+  "totalRows": 25,
+  "totalPages": 3,
   "sort": [],
-  "summary": { "casosTotales": 10, "montoAfectado": 4800000 },
+  "summary": {
+    "casosTotales": 25,
+    "montoAfectado": 4800000
+  },
   "rows": [
     {
       "idCaso": "CASO-3452",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Juan Pablo Rodríguez", "identificacion": "1.045.678.902" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Juan Pablo Rodríguez",
+        "identificacion": "1.045.678.902"
+      },
       "numeroBolsillo": "321-765-4322",
       "numeroGuia": "70002333336",
       "idMovimiento": "3452",
@@ -22,7 +28,10 @@
     },
     {
       "idCaso": "CASO-3453",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Diego Alejandro Silva", "identificacion": "1.045.678.903" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Diego Alejandro Silva",
+        "identificacion": "1.045.678.903"
+      },
       "numeroBolsillo": "322-765-4323",
       "numeroGuia": "70002333337",
       "idMovimiento": "3453",
@@ -36,7 +45,10 @@
     },
     {
       "idCaso": "CASO-3454",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "María Teresa González", "identificacion": "1.045.678.904" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "María Teresa González",
+        "identificacion": "1.045.678.904"
+      },
       "numeroBolsillo": "323-765-4324",
       "numeroGuia": "70002333338",
       "idMovimiento": "3454",
@@ -50,7 +62,10 @@
     },
     {
       "idCaso": "CASO-3455",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Lucía Fernanda Martínez", "identificacion": "1.045.678.905" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Lucía Fernanda Martínez",
+        "identificacion": "1.045.678.905"
+      },
       "numeroBolsillo": "324-765-4325",
       "numeroGuia": "70002333339",
       "idMovimiento": "3455",
@@ -64,7 +79,10 @@
     },
     {
       "idCaso": "CASO-3456",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Andrés Felipe Torres", "identificacion": "1.045.678.906" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Andrés Felipe Torres",
+        "identificacion": "1.045.678.906"
+      },
       "numeroBolsillo": "325-765-4326",
       "numeroGuia": "70002333340",
       "idMovimiento": "3456",
@@ -78,7 +96,10 @@
     },
     {
       "idCaso": "CASO-3457",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Camila Sofia Pérez", "identificacion": "1.045.678.907" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Camila Sofia Pérez",
+        "identificacion": "1.045.678.907"
+      },
       "numeroBolsillo": "326-765-4327",
       "numeroGuia": "70002333341",
       "idMovimiento": "3457",
@@ -92,7 +113,10 @@
     },
     {
       "idCaso": "CASO-3458",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Diego Alejandro Gómez", "identificacion": "1.045.678.908" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Diego Alejandro Gómez",
+        "identificacion": "1.045.678.908"
+      },
       "numeroBolsillo": "327-765-4328",
       "numeroGuia": "70002333342",
       "idMovimiento": "3458",
@@ -106,7 +130,10 @@
     },
     {
       "idCaso": "CASO-3459",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Valentina María Ruiz", "identificacion": "1.045.678.909" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Valentina María Ruiz",
+        "identificacion": "1.045.678.909"
+      },
       "numeroBolsillo": "328-765-4329",
       "numeroGuia": "70002333343",
       "idMovimiento": "3459",
@@ -120,7 +147,10 @@
     },
     {
       "idCaso": "CASO-3460",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Santiago Javier Romero", "identificacion": "1.045.678.910" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Santiago Javier Romero",
+        "identificacion": "1.045.678.910"
+      },
       "numeroBolsillo": "329-765-4330",
       "numeroGuia": "70002333344",
       "idMovimiento": "3460",
@@ -134,7 +164,10 @@
     },
     {
       "idCaso": "CASO-3461",
-      "fuentePrepagoDetalleCliente": { "nombreCompleto": "Isabella Estefanía Suárez", "identificacion": "1.045.678.911" },
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Isabella Estefanía Suárez",
+        "identificacion": "1.045.678.911"
+      },
       "numeroBolsillo": "330-765-4331",
       "numeroGuia": "70002333345",
       "idMovimiento": "3461",
@@ -143,6 +176,261 @@
       "montoInterPay": 2000000,
       "montoBasePagos": 60000,
       "diferencia": 2000000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3462",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Mateo Andrés Herrera",
+        "identificacion": "1.045.678.912"
+      },
+      "numeroBolsillo": "331-765-4332",
+      "numeroGuia": "70002333346",
+      "idMovimiento": "3462",
+      "fechaTransaccion": "2026-04-29T08:00:00-05:00",
+      "estadoLogistico": "Entregado",
+      "montoInterPay": 850000,
+      "montoBasePagos": 65000,
+      "diferencia": 1250000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3463",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Sara Lucía Castro",
+        "identificacion": "1.045.678.913"
+      },
+      "numeroBolsillo": "332-765-4333",
+      "numeroGuia": "70002333347",
+      "idMovimiento": "3463",
+      "fechaTransaccion": "2026-04-30T11:15:00-05:00",
+      "estadoLogistico": "En distribución",
+      "montoInterPay": 1320000,
+      "montoBasePagos": 70000,
+      "diferencia": 860000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3464",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Julián David Ramírez",
+        "identificacion": "1.045.678.914"
+      },
+      "numeroBolsillo": "333-765-4334",
+      "numeroGuia": "70002333348",
+      "idMovimiento": "3464",
+      "fechaTransaccion": "2026-05-01T14:30:00-05:00",
+      "estadoLogistico": "En espera",
+      "montoInterPay": 640000,
+      "montoBasePagos": 75000,
+      "diferencia": 1700000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3465",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Natalia Andrea Vargas",
+        "identificacion": "1.045.678.915"
+      },
+      "numeroBolsillo": "334-765-4335",
+      "numeroGuia": "70002333349",
+      "idMovimiento": "3465",
+      "fechaTransaccion": "2026-05-02T17:45:00-05:00",
+      "estadoLogistico": "Cancelado",
+      "montoInterPay": 1780000,
+      "montoBasePagos": 80000,
+      "diferencia": 640000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3466",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Felipe Esteban Morales",
+        "identificacion": "1.045.678.916"
+      },
+      "numeroBolsillo": "335-765-4336",
+      "numeroGuia": "70002333350",
+      "idMovimiento": "3466",
+      "fechaTransaccion": "2026-05-03T09:00:00-05:00",
+      "estadoLogistico": "Devuelto",
+      "montoInterPay": 910000,
+      "montoBasePagos": 85000,
+      "diferencia": 1380000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3467",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Daniela Carolina Ortiz",
+        "identificacion": "1.045.678.917"
+      },
+      "numeroBolsillo": "336-765-4337",
+      "numeroGuia": "70002333351",
+      "idMovimiento": "3467",
+      "fechaTransaccion": "2026-05-04T12:15:00-05:00",
+      "estadoLogistico": "Listo para recoger",
+      "montoInterPay": 1150000,
+      "montoBasePagos": 90000,
+      "diferencia": 990000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3468",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Sebastián Camilo Rojas",
+        "identificacion": "1.045.678.918"
+      },
+      "numeroBolsillo": "337-765-4338",
+      "numeroGuia": "70002333352",
+      "idMovimiento": "3468",
+      "fechaTransaccion": "2026-05-05T15:30:00-05:00",
+      "estadoLogistico": "En tránsito",
+      "montoInterPay": 720000,
+      "montoBasePagos": 95000,
+      "diferencia": 1120000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3469",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Laura Marcela Jiménez",
+        "identificacion": "1.045.678.919"
+      },
+      "numeroBolsillo": "338-765-4339",
+      "numeroGuia": "70002333353",
+      "idMovimiento": "3469",
+      "fechaTransaccion": "2026-05-06T18:45:00-05:00",
+      "estadoLogistico": "Entregado",
+      "montoInterPay": 1560000,
+      "montoBasePagos": 100000,
+      "diferencia": 780000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3470",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Nicolás Eduardo Peña",
+        "identificacion": "1.045.678.920"
+      },
+      "numeroBolsillo": "339-765-4340",
+      "numeroGuia": "70002333354",
+      "idMovimiento": "3470",
+      "fechaTransaccion": "2026-05-07T10:00:00-05:00",
+      "estadoLogistico": "En distribución",
+      "montoInterPay": 980000,
+      "montoBasePagos": 105000,
+      "diferencia": 1650000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3471",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Paula Alejandra Mejía",
+        "identificacion": "1.045.678.921"
+      },
+      "numeroBolsillo": "340-765-4341",
+      "numeroGuia": "70002333355",
+      "idMovimiento": "3471",
+      "fechaTransaccion": "2026-05-08T13:15:00-05:00",
+      "estadoLogistico": "En espera",
+      "montoInterPay": 1240000,
+      "montoBasePagos": 110000,
+      "diferencia": 870000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3472",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Tomás Ignacio Cárdenas",
+        "identificacion": "1.045.678.922"
+      },
+      "numeroBolsillo": "341-765-4342",
+      "numeroGuia": "70002333356",
+      "idMovimiento": "3472",
+      "fechaTransaccion": "2026-05-09T16:30:00-05:00",
+      "estadoLogistico": "Cancelado",
+      "montoInterPay": 560000,
+      "montoBasePagos": 115000,
+      "diferencia": 1460000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3473",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Mariana Isabel Restrepo",
+        "identificacion": "1.045.678.923"
+      },
+      "numeroBolsillo": "342-765-4343",
+      "numeroGuia": "70002333357",
+      "idMovimiento": "3473",
+      "fechaTransaccion": "2026-05-10T08:45:00-05:00",
+      "estadoLogistico": "Devuelto",
+      "montoInterPay": 1890000,
+      "montoBasePagos": 120000,
+      "diferencia": 720000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3474",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Carlos Mauricio Díaz",
+        "identificacion": "1.045.678.924"
+      },
+      "numeroBolsillo": "343-765-4344",
+      "numeroGuia": "70002333358",
+      "idMovimiento": "3474",
+      "fechaTransaccion": "2026-05-11T11:00:00-05:00",
+      "estadoLogistico": "Listo para recoger",
+      "montoInterPay": 1030000,
+      "montoBasePagos": 125000,
+      "diferencia": 1910000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3475",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Gabriela Sofía Navarro",
+        "identificacion": "1.045.678.925"
+      },
+      "numeroBolsillo": "344-765-4345",
+      "numeroGuia": "70002333359",
+      "idMovimiento": "3475",
+      "fechaTransaccion": "2026-05-12T14:15:00-05:00",
+      "estadoLogistico": "En tránsito",
+      "montoInterPay": 770000,
+      "montoBasePagos": 130000,
+      "diferencia": 1040000,
+      "motivoDiferencia": "Recaudo duplicado PEC",
+      "estado": "PENDIENTE"
+    },
+    {
+      "idCaso": "CASO-3476",
+      "fuentePrepagoDetalleCliente": {
+        "nombreCompleto": "Alejandro José Moreno",
+        "identificacion": "1.045.678.926"
+      },
+      "numeroBolsillo": "345-765-4346",
+      "numeroGuia": "70002333360",
+      "idMovimiento": "3476",
+      "fechaTransaccion": "2026-05-13T17:30:00-05:00",
+      "estadoLogistico": "Entregado",
+      "montoInterPay": 1420000,
+      "montoBasePagos": 135000,
+      "diferencia": 1580000,
       "motivoDiferencia": "Recaudo duplicado PEC",
       "estado": "PENDIENTE"
     }
