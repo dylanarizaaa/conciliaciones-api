@@ -173,9 +173,9 @@ public class ConciliacionesController : ControllerBase
         }
     }
 
-    /// <summary>Resuelve los casos seleccionados. Por ahora solo confirma con 201.</summary>
+    /// <summary>Resuelve los casos seleccionados. Por ahora solo confirma con 200.</summary>
     [HttpPost("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos/resolver")]
-    [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status201Created)]
+    [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status200OK)]
     [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status400BadRequest)]
     [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status404NotFound)]
     public ActionResult<RespuestaApi<ResolverCasosResultado>> ResolverCasos(
@@ -197,6 +197,6 @@ public class ConciliacionesController : ControllerBase
             ValidadoPor = ValidadoPorEjemplo,
             FechaValidacion = DateTimeOffset.UtcNow.ToOffset(TimeSpan.FromHours(-5)) // hora de Colombia
         };
-        return StatusCode(StatusCodes.Status201Created, RespuestaApi<ResolverCasosResultado>.Creado(resultado));
+        return Ok(RespuestaApi<ResolverCasosResultado>.Ok(resultado));
     }
 }
