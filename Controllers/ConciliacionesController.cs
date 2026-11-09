@@ -1,4 +1,6 @@
+using System.Text.Json.Nodes;
 using Conciliaciones.API.Models;
+using Conciliaciones.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -103,5 +105,98 @@ public class ConciliacionesController : ControllerBase
         };
         var resultado = new ResultadoDato<ResultadoPaginado<ReglaDto>> { Data = pagina };
         return Ok(RespuestaApi<ResultadoDato<ResultadoPaginado<ReglaDto>>>.Ok(resultado));
+    }
+
+    // ---- Pantalla Reglas: plantilla paramétrica + casos ----
+
+    private const string ValidadoPorEjemplo = "Alexander Tipacoque";
+
+    private ObjectResult ReglaNoEncontrada<T>(string regla) =>
+        NotFound(RespuestaApi<T>.Error(StatusCodes.Status404NotFound,
+            "Regla no encontrada.", $"No existe la regla '{regla}'."));
+
+    private ObjectResult ParametroInvalido<T>(ParametroInvalidoException ex) =>
+        BadRequest(RespuestaApi<T>.Error(StatusCodes.Status400BadRequest,
+            "Parámetros inválidos.", ex.Message));
+
+    /// <summary>Obtiene la plantilla (columnas, celdas, orden, acciones) de la tabla de una regla.</summary>
+    [HttpGet("subprocesos/{subProcesoId:guid}/reglas/{regla}/plantilla")]
+    [ProducesResponseType<RespuestaApi<JsonObject>>(StatusCodes.Status200OK)]
+    [ProducesResponseType<RespuestaApi<JsonObject>>(StatusCodes.Status404NotFound)]
+    public ActionResult<RespuestaApi<JsonObject>> ObtenerPlantillaRegla(Guid subProcesoId, string regla)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<JsonObject>(regla);
+        return Ok(RespuestaApi<JsonObject>.Ok(ReglasCasosStore.ObtenerPlantilla(regla)));
+    }
+
+    /// <summary>Obtiene, paginados y ordenados, los casos con diferencias de una regla.</summary>
+    [HttpGet("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos")]
+    [ProducesResponseType<RespuestaApi<PaginaCasos>>(StatusCodes.Status200OK)]
+    [ProducesResponseType<RespuestaApi<PaginaCasos>>(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType<RespuestaApi<PaginaCasos>>(StatusCodes.Status404NotFound)]
+    public ActionResult<RespuestaApi<PaginaCasos>> ObtenerCasosRegla(
+        Guid subProcesoId,
+        string regla,
+        [FromQuery] int pageNumber = 1,
+        [FromQuery] int pageSize = 10,
+        [FromQuery] string[]? sort = null)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<PaginaCasos>(regla);
+        try
+        {
+            return Ok(RespuestaApi<PaginaCasos>.Ok(
+                ReglasCasosStore.ObtenerPagina(regla, pageNumber, pageSize, sort ?? [])));
+        }
+        catch (ParametroInvalidoException ex)
+        {
+            return ParametroInvalido<PaginaCasos>(ex);
+        }
+    }
+
+    /// <summary>Descarga en CSV los casos de una regla con el orden indicado.</summary>
+    [HttpGet("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos/reporte")]
+    [Produces("text/csv", "application/json")]
+    [ProducesResponseType<FileContentResult>(StatusCodes.Status200OK, "text/csv")]
+    [ProducesResponseType<RespuestaApi<object>>(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType<RespuestaApi<object>>(StatusCodes.Status404NotFound)]
+    public IActionResult DescargarReporteCasos(Guid subProcesoId, string regla, [FromQuery] string[]? sort = null)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<object>(regla);
+        try
+        {
+            var csv = ReglasCasosStore.GenerarReporteCsv(regla, sort ?? []);
+            return File(csv, "text/csv", $"diferencias-{regla}.csv");
+        }
+        catch (ParametroInvalidoException ex)
+        {
+            return ParametroInvalido<object>(ex);
+        }
+    }
+
+    /// <summary>Resuelve los casos seleccionados. Por ahora solo confirma con 201.</summary>
+    [HttpPost("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos/resolver")]
+    [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status201Created)]
+    [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType<RespuestaApi<ResolverCasosResultado>>(StatusCodes.Status404NotFound)]
+    public ActionResult<RespuestaApi<ResolverCasosResultado>> ResolverCasos(
+        Guid subProcesoId, string regla, [FromBody] ResolverCasosRequest solicitud)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<ResolverCasosResultado>(regla);
+
+        var ids = solicitud.Ids.Where(id => !string.IsNullOrWhiteSpace(id)).Distinct().ToList();
+        if (ids.Count == 0)
+        {
+            return BadRequest(RespuestaApi<ResolverCasosResultado>.Error(
+                StatusCodes.Status400BadRequest, "Solicitud inválida.", "Debe enviar al menos un id en 'ids'."));
+        }
+
+        var resultado = new ResolverCasosResultado
+        {
+            Procesados = ids.Count,
+            Pendientes = 0,
+            ValidadoPor = ValidadoPorEjemplo,
+            FechaValidacion = DateTimeOffset.UtcNow.ToOffset(TimeSpan.FromHours(-5)) // hora de Colombia
+        };
+        return StatusCode(StatusCodes.Status201Created, RespuestaApi<ResolverCasosResultado>.Creado(resultado));
     }
 }
