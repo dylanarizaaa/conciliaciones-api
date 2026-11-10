@@ -115,6 +115,10 @@ public class ConciliacionesController : ControllerBase
         NotFound(RespuestaApi<T>.Error(StatusCodes.Status404NotFound,
             "Regla no encontrada.", $"No existe la regla '{regla}'."));
 
+    private ObjectResult CasoNoEncontrado<T>(string casoId) =>
+        NotFound(RespuestaApi<T>.Error(StatusCodes.Status404NotFound,
+            "Caso no encontrado.", $"No existe el caso '{casoId}'."));
+
     private ObjectResult ParametroInvalido<T>(ParametroInvalidoException ex) =>
         BadRequest(RespuestaApi<T>.Error(StatusCodes.Status400BadRequest,
             "Parámetros inválidos.", ex.Message));
@@ -171,6 +175,38 @@ public class ConciliacionesController : ControllerBase
         {
             return ParametroInvalido<object>(ex);
         }
+    }
+
+    /// <summary>Obtiene la plantilla de la pantalla Detalle (acordeones por aplicativo + historial).</summary>
+    [HttpGet("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos/plantilla")]
+    [ProducesResponseType<RespuestaApi<JsonObject>>(StatusCodes.Status200OK)]
+    [ProducesResponseType<RespuestaApi<JsonObject>>(StatusCodes.Status404NotFound)]
+    public ActionResult<RespuestaApi<JsonObject>> ObtenerPlantillaDetalle(Guid subProcesoId, string regla)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<JsonObject>(regla);
+        return Ok(RespuestaApi<JsonObject>.Ok(ReglasCasosStore.ObtenerPlantillaDetalle(regla)));
+    }
+
+    /// <summary>Obtiene el registro de un caso con la información de cada aplicativo.</summary>
+    [HttpGet("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos/{casoId}")]
+    [ProducesResponseType<RespuestaApi<JsonObject>>(StatusCodes.Status200OK)]
+    [ProducesResponseType<RespuestaApi<JsonObject>>(StatusCodes.Status404NotFound)]
+    public ActionResult<RespuestaApi<JsonObject>> ObtenerDetalleCaso(Guid subProcesoId, string regla, string casoId)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<JsonObject>(regla);
+        var detalle = ReglasCasosStore.ObtenerDetalleCaso(casoId);
+        return detalle is null ? CasoNoEncontrado<JsonObject>(casoId) : Ok(RespuestaApi<JsonObject>.Ok(detalle));
+    }
+
+    /// <summary>Obtiene el historial de cambios de un caso (sin paginación; el orden lo aplica el front).</summary>
+    [HttpGet("subprocesos/{subProcesoId:guid}/reglas/{regla}/casos/{casoId}/historial")]
+    [ProducesResponseType<RespuestaApi<PaginaHistorial>>(StatusCodes.Status200OK)]
+    [ProducesResponseType<RespuestaApi<PaginaHistorial>>(StatusCodes.Status404NotFound)]
+    public ActionResult<RespuestaApi<PaginaHistorial>> ObtenerHistorialCaso(Guid subProcesoId, string regla, string casoId)
+    {
+        if (!ReglasCasosStore.ExisteRegla(regla)) return ReglaNoEncontrada<PaginaHistorial>(regla);
+        if (!ReglasCasosStore.ExisteCaso(casoId)) return CasoNoEncontrado<PaginaHistorial>(casoId);
+        return Ok(RespuestaApi<PaginaHistorial>.Ok(ReglasCasosStore.ObtenerHistorialCaso(casoId)));
     }
 
     /// <summary>Resuelve los casos seleccionados. Por ahora solo confirma con 200.</summary>

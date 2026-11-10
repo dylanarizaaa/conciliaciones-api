@@ -28,6 +28,17 @@ public class PaginaCasos
     public List<JsonObject> Rows { get; set; } = [];
 }
 
+/// <summary>Historial de un caso: misma forma que cualquier tabla, sin resumen y sin paginación real.</summary>
+public class PaginaHistorial
+{
+    public int PageNumber { get; set; }
+    public int PageSize { get; set; }
+    public int TotalRows { get; set; }
+    public int TotalPages { get; set; }
+    public List<OrdenAplicado> Sort { get; set; } = [];
+    public List<JsonObject> Rows { get; set; } = [];
+}
+
 /// <summary>Cuerpo de POST …/casos/resolver.</summary>
 public class ResolverCasosRequest
 {
