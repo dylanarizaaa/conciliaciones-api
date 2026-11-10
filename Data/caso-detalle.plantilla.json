@@ -24,7 +24,6 @@
       },
       "accordion": {
         "type": "multiple",
-        "columns": 2,
         "items": [
           {
             "id": "pagoEnCasa",
@@ -34,16 +33,16 @@
               "emptyState": {
                 "title": "Sin información en este aplicativo."
               },
-              "fields": [
+              "columns": [
                 {
                   "id": "estado",
-                  "label": "Estado",
-                  "accessorKey": "pagoEnCasa.estado"
+                  "accessorKey": "pagoEnCasa.estado",
+                  "header": "Estado"
                 },
                 {
                   "id": "recaudo",
-                  "label": "Recaudo",
                   "accessorKey": "pagoEnCasa.recaudo",
+                  "header": "Recaudo",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -54,8 +53,8 @@
                 },
                 {
                   "id": "diferencia",
-                  "label": "Diferencia",
                   "accessorKey": "pagoEnCasa.diferencia",
+                  "header": "Diferencia",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -75,16 +74,16 @@
               "emptyState": {
                 "title": "Sin información en este aplicativo."
               },
-              "fields": [
+              "columns": [
                 {
                   "id": "estado",
-                  "label": "Estado",
-                  "accessorKey": "alcarrito.estado"
+                  "accessorKey": "alcarrito.estado",
+                  "header": "Estado"
                 },
                 {
                   "id": "recaudo",
-                  "label": "Recaudo",
                   "accessorKey": "alcarrito.recaudo",
+                  "header": "Recaudo",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -95,8 +94,8 @@
                 },
                 {
                   "id": "diferencia",
-                  "label": "Diferencia",
                   "accessorKey": "alcarrito.diferencia",
+                  "header": "Diferencia",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -116,16 +115,16 @@
               "emptyState": {
                 "title": "Sin información en este aplicativo."
               },
-              "fields": [
+              "columns": [
                 {
                   "id": "estado",
-                  "label": "Estado",
-                  "accessorKey": "novasoft.estado"
+                  "accessorKey": "novasoft.estado",
+                  "header": "Estado"
                 },
                 {
                   "id": "recaudo",
-                  "label": "Recaudo",
                   "accessorKey": "novasoft.recaudo",
+                  "header": "Recaudo",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -136,8 +135,8 @@
                 },
                 {
                   "id": "diferencia",
-                  "label": "Diferencia",
                   "accessorKey": "novasoft.diferencia",
+                  "header": "Diferencia",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -157,21 +156,21 @@
               "emptyState": {
                 "title": "Sin información en este aplicativo."
               },
-              "fields": [
+              "columns": [
                 {
                   "id": "concepto1",
-                  "label": "Concepto 1",
-                  "accessorKey": "controller.concepto1"
+                  "accessorKey": "controller.concepto1",
+                  "header": "Concepto 1"
                 },
                 {
                   "id": "concepto2",
-                  "label": "Concepto 2",
-                  "accessorKey": "controller.concepto2"
+                  "accessorKey": "controller.concepto2",
+                  "header": "Concepto 2"
                 },
                 {
                   "id": "concepto3",
-                  "label": "Concepto 3",
-                  "accessorKey": "controller.concepto3"
+                  "accessorKey": "controller.concepto3",
+                  "header": "Concepto 3"
                 }
               ]
             }
@@ -184,16 +183,16 @@
               "emptyState": {
                 "title": "Sin información en este aplicativo."
               },
-              "fields": [
+              "columns": [
                 {
                   "id": "estado",
-                  "label": "Estado",
-                  "accessorKey": "mitiMiti.estado"
+                  "accessorKey": "mitiMiti.estado",
+                  "header": "Estado"
                 },
                 {
                   "id": "recaudo",
-                  "label": "Recaudo",
                   "accessorKey": "mitiMiti.recaudo",
+                  "header": "Recaudo",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -204,8 +203,8 @@
                 },
                 {
                   "id": "diferencia",
-                  "label": "Diferencia",
                   "accessorKey": "mitiMiti.diferencia",
+                  "header": "Diferencia",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -225,16 +224,16 @@
               "emptyState": {
                 "title": "Sin información en este aplicativo."
               },
-              "fields": [
+              "columns": [
                 {
                   "id": "estado",
-                  "label": "Estado",
-                  "accessorKey": "app.estado"
+                  "accessorKey": "app.estado",
+                  "header": "Estado"
                 },
                 {
                   "id": "recaudo",
-                  "label": "Recaudo",
                   "accessorKey": "app.recaudo",
+                  "header": "Recaudo",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -245,8 +244,8 @@
                 },
                 {
                   "id": "diferencia",
-                  "label": "Diferencia",
                   "accessorKey": "app.diferencia",
+                  "header": "Diferencia",
                   "cell": {
                     "component": "CurrencyCell",
                     "inputs": {
@@ -258,20 +257,23 @@
               ]
             }
           }
-        ]
+        ],
+        "layoutColumns": 2
       }
     },
     {
       "id": "pestanas",
       "type": "tabs",
-      "defaultTab": "historial",
-      "tabs": [
-        {
-          "id": "historial",
-          "label": "Historial de cambios",
-          "blockId": "historial"
-        }
-      ]
+      "tabs": {
+        "defaultTab": "historial",
+        "items": [
+          {
+            "id": "historial",
+            "title": "Historial de cambios",
+            "blockId": "historial"
+          }
+        ]
+      }
     },
     {
       "id": "historial",
