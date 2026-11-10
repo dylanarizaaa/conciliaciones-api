@@ -1,0 +1,397 @@
+{
+  "CASO-3452": [
+    {
+      "idCambio": "CAMBIO-1",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 3100000,
+      "fechaCreacion": "2026-06-26T09:10:00-05:00",
+      "fechaAprobacion": "2026-06-27T15:40:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-2",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 3100000,
+      "fechaCreacion": "2026-06-26T10:25:00-05:00",
+      "fechaAprobacion": "2026-06-27T16:05:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-3",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 3100000,
+      "fechaCreacion": "2026-06-26T11:50:00-05:00",
+      "fechaAprobacion": "2026-06-27T16:30:00-05:00"
+    }
+  ],
+  "CASO-3453": [
+    {
+      "idCambio": "CAMBIO-4",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1050000,
+      "fechaCreacion": "2026-04-21T18:15:00-05:00",
+      "fechaAprobacion": "2026-04-22T23:15:00-05:00"
+    }
+  ],
+  "CASO-3454": [
+    {
+      "idCambio": "CAMBIO-7",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 750000,
+      "fechaCreacion": "2026-04-22T19:45:00-05:00",
+      "fechaAprobacion": "2026-04-24T00:45:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-8",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 750000,
+      "fechaCreacion": "2026-04-22T20:45:00-05:00",
+      "fechaAprobacion": "2026-04-24T01:45:00-05:00"
+    }
+  ],
+  "CASO-3455": [
+    {
+      "idCambio": "CAMBIO-10",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1200000,
+      "fechaCreacion": "2026-04-23T08:30:00-05:00",
+      "fechaAprobacion": "2026-04-24T13:30:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-11",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 1200000,
+      "fechaCreacion": "2026-04-23T09:30:00-05:00",
+      "fechaAprobacion": "2026-04-24T14:30:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-12",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1200000,
+      "fechaCreacion": "2026-04-23T10:30:00-05:00",
+      "fechaAprobacion": "2026-04-24T15:30:00-05:00"
+    }
+  ],
+  "CASO-3456": [],
+  "CASO-3457": [
+    {
+      "idCambio": "CAMBIO-16",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1500000,
+      "fechaCreacion": "2026-04-25T10:15:00-05:00",
+      "fechaAprobacion": "2026-04-26T15:15:00-05:00"
+    }
+  ],
+  "CASO-3458": [
+    {
+      "idCambio": "CAMBIO-19",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 820000,
+      "fechaCreacion": "2026-04-26T11:30:00-05:00",
+      "fechaAprobacion": "2026-04-27T16:30:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-20",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 820000,
+      "fechaCreacion": "2026-04-26T12:30:00-05:00",
+      "fechaAprobacion": "2026-04-27T17:30:00-05:00"
+    }
+  ],
+  "CASO-3459": [
+    {
+      "idCambio": "CAMBIO-22",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 930000,
+      "fechaCreacion": "2026-04-27T12:00:00-05:00",
+      "fechaAprobacion": "2026-04-28T17:00:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-23",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 930000,
+      "fechaCreacion": "2026-04-27T13:00:00-05:00",
+      "fechaAprobacion": "2026-04-28T18:00:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-24",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 930000,
+      "fechaCreacion": "2026-04-27T14:00:00-05:00",
+      "fechaAprobacion": "2026-04-28T19:00:00-05:00"
+    }
+  ],
+  "CASO-3460": [],
+  "CASO-3461": [
+    {
+      "idCambio": "CAMBIO-28",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 2000000,
+      "fechaCreacion": "2026-04-29T14:30:00-05:00",
+      "fechaAprobacion": "2026-04-30T19:30:00-05:00"
+    }
+  ],
+  "CASO-3462": [
+    {
+      "idCambio": "CAMBIO-31",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1250000,
+      "fechaCreacion": "2026-04-30T08:00:00-05:00",
+      "fechaAprobacion": "2026-05-01T13:00:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-32",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 1250000,
+      "fechaCreacion": "2026-04-30T09:00:00-05:00",
+      "fechaAprobacion": "2026-05-01T14:00:00-05:00"
+    }
+  ],
+  "CASO-3463": [
+    {
+      "idCambio": "CAMBIO-34",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 860000,
+      "fechaCreacion": "2026-05-01T11:15:00-05:00",
+      "fechaAprobacion": "2026-05-02T16:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-35",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 860000,
+      "fechaCreacion": "2026-05-01T12:15:00-05:00",
+      "fechaAprobacion": "2026-05-02T17:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-36",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 860000,
+      "fechaCreacion": "2026-05-01T13:15:00-05:00",
+      "fechaAprobacion": "2026-05-02T18:15:00-05:00"
+    }
+  ],
+  "CASO-3464": [],
+  "CASO-3465": [
+    {
+      "idCambio": "CAMBIO-40",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 640000,
+      "fechaCreacion": "2026-05-03T17:45:00-05:00",
+      "fechaAprobacion": "2026-05-04T22:45:00-05:00"
+    }
+  ],
+  "CASO-3466": [
+    {
+      "idCambio": "CAMBIO-43",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1380000,
+      "fechaCreacion": "2026-05-04T09:00:00-05:00",
+      "fechaAprobacion": "2026-05-05T14:00:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-44",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 1380000,
+      "fechaCreacion": "2026-05-04T10:00:00-05:00",
+      "fechaAprobacion": "2026-05-05T15:00:00-05:00"
+    }
+  ],
+  "CASO-3467": [
+    {
+      "idCambio": "CAMBIO-46",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 990000,
+      "fechaCreacion": "2026-05-05T12:15:00-05:00",
+      "fechaAprobacion": "2026-05-06T17:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-47",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 990000,
+      "fechaCreacion": "2026-05-05T13:15:00-05:00",
+      "fechaAprobacion": "2026-05-06T18:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-48",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 990000,
+      "fechaCreacion": "2026-05-05T14:15:00-05:00",
+      "fechaAprobacion": "2026-05-06T19:15:00-05:00"
+    }
+  ],
+  "CASO-3468": [],
+  "CASO-3469": [
+    {
+      "idCambio": "CAMBIO-52",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 780000,
+      "fechaCreacion": "2026-05-07T18:45:00-05:00",
+      "fechaAprobacion": "2026-05-08T23:45:00-05:00"
+    }
+  ],
+  "CASO-3470": [
+    {
+      "idCambio": "CAMBIO-55",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1650000,
+      "fechaCreacion": "2026-05-08T10:00:00-05:00",
+      "fechaAprobacion": "2026-05-09T15:00:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-56",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 1650000,
+      "fechaCreacion": "2026-05-08T11:00:00-05:00",
+      "fechaAprobacion": "2026-05-09T16:00:00-05:00"
+    }
+  ],
+  "CASO-3471": [
+    {
+      "idCambio": "CAMBIO-58",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 870000,
+      "fechaCreacion": "2026-05-09T13:15:00-05:00",
+      "fechaAprobacion": "2026-05-10T18:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-59",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 870000,
+      "fechaCreacion": "2026-05-09T14:15:00-05:00",
+      "fechaAprobacion": "2026-05-10T19:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-60",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 870000,
+      "fechaCreacion": "2026-05-09T15:15:00-05:00",
+      "fechaAprobacion": "2026-05-10T20:15:00-05:00"
+    }
+  ],
+  "CASO-3472": [],
+  "CASO-3473": [
+    {
+      "idCambio": "CAMBIO-64",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 720000,
+      "fechaCreacion": "2026-05-11T08:45:00-05:00",
+      "fechaAprobacion": "2026-05-12T13:45:00-05:00"
+    }
+  ],
+  "CASO-3474": [
+    {
+      "idCambio": "CAMBIO-67",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1910000,
+      "fechaCreacion": "2026-05-12T11:00:00-05:00",
+      "fechaAprobacion": "2026-05-13T16:00:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-68",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 1910000,
+      "fechaCreacion": "2026-05-12T12:00:00-05:00",
+      "fechaAprobacion": "2026-05-13T17:00:00-05:00"
+    }
+  ],
+  "CASO-3475": [
+    {
+      "idCambio": "CAMBIO-70",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario1@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1040000,
+      "fechaCreacion": "2026-05-13T14:15:00-05:00",
+      "fechaAprobacion": "2026-05-14T19:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-71",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario2@interrapidisimo.com",
+      "medioPago": "Inter Pay Interrapidisimo",
+      "valor": 1040000,
+      "fechaCreacion": "2026-05-13T15:15:00-05:00",
+      "fechaAprobacion": "2026-05-14T20:15:00-05:00"
+    },
+    {
+      "idCambio": "CAMBIO-72",
+      "regla": "Reverso por Pago en Casa duplicado",
+      "correo": "usuario3@interrapidisimo.com",
+      "medioPago": "Inter Pay Cliente",
+      "valor": 1040000,
+      "fechaCreacion": "2026-05-13T16:15:00-05:00",
+      "fechaAprobacion": "2026-05-14T21:15:00-05:00"
+    }
+  ],
+  "CASO-3476": []
+}

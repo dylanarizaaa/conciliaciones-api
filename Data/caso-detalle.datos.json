@@ -1,0 +1,992 @@
+{
+  "CASO-3452": {
+    "idCaso": "CASO-3452",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Juan Pablo Rodríguez",
+      "identificacion": "1.045.678.902"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333336",
+      "estado": "Entregado",
+      "recaudo": 6200000,
+      "diferencia": 3100000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333336",
+      "estado": "Entregado",
+      "recaudo": 3100000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333336",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333336",
+      "estado": "En distribución",
+      "recaudo": 3100000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333336",
+      "estado": "Entregado",
+      "recaudo": 3100000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3453": {
+    "idCaso": "CASO-3453",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Diego Alejandro Silva",
+      "identificacion": "1.045.678.903"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333337",
+      "estado": "En distribución",
+      "recaudo": 1725000,
+      "diferencia": 1050000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333337",
+      "estado": "En distribución",
+      "recaudo": 675000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333337",
+      "estado": "Conciliado",
+      "recaudo": 675000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333337",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333337",
+      "estado": "En distribución",
+      "recaudo": 675000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333337",
+      "estado": "En distribución",
+      "recaudo": 675000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3454": {
+    "idCaso": "CASO-3454",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "María Teresa González",
+      "identificacion": "1.045.678.904"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333338",
+      "estado": "En espera",
+      "recaudo": 1670000,
+      "diferencia": 750000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333338",
+      "estado": "En espera",
+      "recaudo": 920000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333338",
+      "estado": "Conciliado",
+      "recaudo": 920000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333338",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333338",
+      "estado": "En distribución",
+      "recaudo": 920000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333338",
+      "estado": "En espera",
+      "recaudo": 920000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3455": {
+    "idCaso": "CASO-3455",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Lucía Fernanda Martínez",
+      "identificacion": "1.045.678.905"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333339",
+      "estado": "Cancelado",
+      "recaudo": 2650000,
+      "diferencia": 1200000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333339",
+      "estado": "Cancelado",
+      "recaudo": 1450000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333339",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333339",
+      "estado": "En distribución",
+      "recaudo": 1450000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333339",
+      "estado": "Cancelado",
+      "recaudo": 1450000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3456": {
+    "idCaso": "CASO-3456",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Andrés Felipe Torres",
+      "identificacion": "1.045.678.906"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333340",
+      "estado": "Devuelto",
+      "recaudo": 1280000,
+      "diferencia": 680000
+    },
+    "alcarrito": null,
+    "novasoft": {
+      "numeroGuia": "70002333340",
+      "estado": "Conciliado",
+      "recaudo": 600000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333340",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333340",
+      "estado": "En distribución",
+      "recaudo": 600000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333340",
+      "estado": "Devuelto",
+      "recaudo": 600000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3457": {
+    "idCaso": "CASO-3457",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Camila Sofia Pérez",
+      "identificacion": "1.045.678.907"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333341",
+      "estado": "Listo para recoger",
+      "recaudo": 2280000,
+      "diferencia": 1500000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333341",
+      "estado": "Listo para recoger",
+      "recaudo": 780000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333341",
+      "estado": "Conciliado",
+      "recaudo": 780000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333341",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333341",
+      "estado": "En distribución",
+      "recaudo": 780000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333341",
+      "estado": "Listo para recoger",
+      "recaudo": 780000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3458": {
+    "idCaso": "CASO-3458",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Diego Alejandro Gómez",
+      "identificacion": "1.045.678.908"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333342",
+      "estado": "En tránsito",
+      "recaudo": 2170000,
+      "diferencia": 820000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333342",
+      "estado": "En tránsito",
+      "recaudo": 1350000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333342",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333342",
+      "estado": "En distribución",
+      "recaudo": 1350000,
+      "diferencia": 0
+    },
+    "app": null
+  },
+  "CASO-3459": {
+    "idCaso": "CASO-3459",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Valentina María Ruiz",
+      "identificacion": "1.045.678.909"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333343",
+      "estado": "Entregado",
+      "recaudo": 1430000,
+      "diferencia": 930000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333343",
+      "estado": "Entregado",
+      "recaudo": 500000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333343",
+      "estado": "Conciliado",
+      "recaudo": 500000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333343",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333343",
+      "estado": "En distribución",
+      "recaudo": 500000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333343",
+      "estado": "Entregado",
+      "recaudo": 500000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3460": {
+    "idCaso": "CASO-3460",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Santiago Javier Romero",
+      "identificacion": "1.045.678.910"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333344",
+      "estado": "En distribución",
+      "recaudo": 2200000,
+      "diferencia": 1100000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333344",
+      "estado": "En distribución",
+      "recaudo": 1100000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333344",
+      "estado": "Conciliado",
+      "recaudo": 1100000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333344",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333344",
+      "estado": "En distribución",
+      "recaudo": 1100000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333344",
+      "estado": "En distribución",
+      "recaudo": 1100000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3461": {
+    "idCaso": "CASO-3461",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Isabella Estefanía Suárez",
+      "identificacion": "1.045.678.911"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333345",
+      "estado": "Entregado",
+      "recaudo": 4000000,
+      "diferencia": 2000000
+    },
+    "alcarrito": null,
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333345",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333345",
+      "estado": "En distribución",
+      "recaudo": 2000000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333345",
+      "estado": "Entregado",
+      "recaudo": 2000000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3462": {
+    "idCaso": "CASO-3462",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Mateo Andrés Herrera",
+      "identificacion": "1.045.678.912"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333346",
+      "estado": "Entregado",
+      "recaudo": 2100000,
+      "diferencia": 1250000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333346",
+      "estado": "Entregado",
+      "recaudo": 850000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333346",
+      "estado": "Conciliado",
+      "recaudo": 850000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333346",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333346",
+      "estado": "En distribución",
+      "recaudo": 850000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333346",
+      "estado": "Entregado",
+      "recaudo": 850000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3463": {
+    "idCaso": "CASO-3463",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Sara Lucía Castro",
+      "identificacion": "1.045.678.913"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333347",
+      "estado": "En distribución",
+      "recaudo": 2180000,
+      "diferencia": 860000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333347",
+      "estado": "En distribución",
+      "recaudo": 1320000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333347",
+      "estado": "Conciliado",
+      "recaudo": 1320000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333347",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333347",
+      "estado": "En distribución",
+      "recaudo": 1320000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333347",
+      "estado": "En distribución",
+      "recaudo": 1320000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3464": {
+    "idCaso": "CASO-3464",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Julián David Ramírez",
+      "identificacion": "1.045.678.914"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333348",
+      "estado": "En espera",
+      "recaudo": 2340000,
+      "diferencia": 1700000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333348",
+      "estado": "En espera",
+      "recaudo": 640000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333348",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333348",
+      "estado": "En distribución",
+      "recaudo": 640000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333348",
+      "estado": "En espera",
+      "recaudo": 640000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3465": {
+    "idCaso": "CASO-3465",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Natalia Andrea Vargas",
+      "identificacion": "1.045.678.915"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333349",
+      "estado": "Cancelado",
+      "recaudo": 2420000,
+      "diferencia": 640000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333349",
+      "estado": "Cancelado",
+      "recaudo": 1780000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333349",
+      "estado": "Conciliado",
+      "recaudo": 1780000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333349",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333349",
+      "estado": "En distribución",
+      "recaudo": 1780000,
+      "diferencia": 0
+    },
+    "app": null
+  },
+  "CASO-3466": {
+    "idCaso": "CASO-3466",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Felipe Esteban Morales",
+      "identificacion": "1.045.678.916"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333350",
+      "estado": "Devuelto",
+      "recaudo": 2290000,
+      "diferencia": 1380000
+    },
+    "alcarrito": null,
+    "novasoft": {
+      "numeroGuia": "70002333350",
+      "estado": "Conciliado",
+      "recaudo": 910000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333350",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333350",
+      "estado": "En distribución",
+      "recaudo": 910000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333350",
+      "estado": "Devuelto",
+      "recaudo": 910000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3467": {
+    "idCaso": "CASO-3467",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Daniela Carolina Ortiz",
+      "identificacion": "1.045.678.917"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333351",
+      "estado": "Listo para recoger",
+      "recaudo": 2140000,
+      "diferencia": 990000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333351",
+      "estado": "Listo para recoger",
+      "recaudo": 1150000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333351",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333351",
+      "estado": "En distribución",
+      "recaudo": 1150000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333351",
+      "estado": "Listo para recoger",
+      "recaudo": 1150000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3468": {
+    "idCaso": "CASO-3468",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Sebastián Camilo Rojas",
+      "identificacion": "1.045.678.918"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333352",
+      "estado": "En tránsito",
+      "recaudo": 1840000,
+      "diferencia": 1120000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333352",
+      "estado": "En tránsito",
+      "recaudo": 720000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333352",
+      "estado": "Conciliado",
+      "recaudo": 720000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333352",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333352",
+      "estado": "En distribución",
+      "recaudo": 720000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333352",
+      "estado": "En tránsito",
+      "recaudo": 720000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3469": {
+    "idCaso": "CASO-3469",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Laura Marcela Jiménez",
+      "identificacion": "1.045.678.919"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333353",
+      "estado": "Entregado",
+      "recaudo": 2340000,
+      "diferencia": 780000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333353",
+      "estado": "Entregado",
+      "recaudo": 1560000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333353",
+      "estado": "Conciliado",
+      "recaudo": 1560000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333353",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333353",
+      "estado": "En distribución",
+      "recaudo": 1560000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333353",
+      "estado": "Entregado",
+      "recaudo": 1560000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3470": {
+    "idCaso": "CASO-3470",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Nicolás Eduardo Peña",
+      "identificacion": "1.045.678.920"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333354",
+      "estado": "En distribución",
+      "recaudo": 2630000,
+      "diferencia": 1650000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333354",
+      "estado": "En distribución",
+      "recaudo": 980000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333354",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333354",
+      "estado": "En distribución",
+      "recaudo": 980000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333354",
+      "estado": "En distribución",
+      "recaudo": 980000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3471": {
+    "idCaso": "CASO-3471",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Paula Alejandra Mejía",
+      "identificacion": "1.045.678.921"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333355",
+      "estado": "En espera",
+      "recaudo": 2110000,
+      "diferencia": 870000
+    },
+    "alcarrito": null,
+    "novasoft": {
+      "numeroGuia": "70002333355",
+      "estado": "Conciliado",
+      "recaudo": 1240000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333355",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333355",
+      "estado": "En distribución",
+      "recaudo": 1240000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333355",
+      "estado": "En espera",
+      "recaudo": 1240000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3472": {
+    "idCaso": "CASO-3472",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Tomás Ignacio Cárdenas",
+      "identificacion": "1.045.678.922"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333356",
+      "estado": "Cancelado",
+      "recaudo": 2020000,
+      "diferencia": 1460000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333356",
+      "estado": "Cancelado",
+      "recaudo": 560000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333356",
+      "estado": "Conciliado",
+      "recaudo": 560000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333356",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333356",
+      "estado": "En distribución",
+      "recaudo": 560000,
+      "diferencia": 0
+    },
+    "app": null
+  },
+  "CASO-3473": {
+    "idCaso": "CASO-3473",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Mariana Isabel Restrepo",
+      "identificacion": "1.045.678.923"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333357",
+      "estado": "Devuelto",
+      "recaudo": 2610000,
+      "diferencia": 720000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333357",
+      "estado": "Devuelto",
+      "recaudo": 1890000,
+      "diferencia": 0
+    },
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333357",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333357",
+      "estado": "En distribución",
+      "recaudo": 1890000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333357",
+      "estado": "Devuelto",
+      "recaudo": 1890000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3474": {
+    "idCaso": "CASO-3474",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Carlos Mauricio Díaz",
+      "identificacion": "1.045.678.924"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333358",
+      "estado": "Listo para recoger",
+      "recaudo": 2940000,
+      "diferencia": 1910000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333358",
+      "estado": "Listo para recoger",
+      "recaudo": 1030000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333358",
+      "estado": "Conciliado",
+      "recaudo": 1030000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333358",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333358",
+      "estado": "En distribución",
+      "recaudo": 1030000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333358",
+      "estado": "Listo para recoger",
+      "recaudo": 1030000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3475": {
+    "idCaso": "CASO-3475",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Gabriela Sofía Navarro",
+      "identificacion": "1.045.678.925"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333359",
+      "estado": "En tránsito",
+      "recaudo": 1810000,
+      "diferencia": 1040000
+    },
+    "alcarrito": {
+      "numeroGuia": "70002333359",
+      "estado": "En tránsito",
+      "recaudo": 770000,
+      "diferencia": 0
+    },
+    "novasoft": {
+      "numeroGuia": "70002333359",
+      "estado": "Conciliado",
+      "recaudo": 770000,
+      "diferencia": 0
+    },
+    "controller": {
+      "numeroGuia": "70002333359",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333359",
+      "estado": "En distribución",
+      "recaudo": 770000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333359",
+      "estado": "En tránsito",
+      "recaudo": 770000,
+      "diferencia": 0
+    }
+  },
+  "CASO-3476": {
+    "idCaso": "CASO-3476",
+    "fuentePrepagoDetalleCliente": {
+      "nombreCompleto": "Alejandro José Moreno",
+      "identificacion": "1.045.678.926"
+    },
+    "pagoEnCasa": {
+      "numeroGuia": "70002333360",
+      "estado": "Entregado",
+      "recaudo": 3000000,
+      "diferencia": 1580000
+    },
+    "alcarrito": null,
+    "novasoft": null,
+    "controller": {
+      "numeroGuia": "70002333360",
+      "concepto1": "Valor concepto 1",
+      "concepto2": "Valor concepto 2",
+      "concepto3": "Valor concepto 3"
+    },
+    "mitiMiti": {
+      "numeroGuia": "70002333360",
+      "estado": "En distribución",
+      "recaudo": 1420000,
+      "diferencia": 0
+    },
+    "app": {
+      "numeroGuia": "70002333360",
+      "estado": "Entregado",
+      "recaudo": 1420000,
+      "diferencia": 0
+    }
+  }
+}

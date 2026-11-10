@@ -27,6 +27,10 @@ public static class ReglasCasosStore
         ["Cambio de estado logístico"] = "Diferencias de la regla"
     };
 
+    private static readonly Lazy<JsonObject> PlantillaDetalleBase = new(() => Cargar("caso-detalle.plantilla.json"));
+    private static readonly Lazy<JsonObject> DetallesPorCaso = new(() => Cargar("caso-detalle.datos.json"));
+    private static readonly Lazy<JsonObject> HistorialPorCaso = new(() => Cargar("caso-detalle.historial.json"));
+
     private static JsonObject Cargar(string archivo) =>
         JsonNode.Parse(File.ReadAllText(Path.Combine(DataDir, archivo)))!.AsObject();
 
@@ -38,6 +42,31 @@ public static class ReglasCasosStore
         var plantilla = PlantillaBase.Value.DeepClone().AsObject();
         plantilla["title"] = TitulosPorRegla[regla];
         return plantilla;
+    }
+
+    /// <summary>Plantilla de la pantalla Detalle de la regla (copia: el original no se modifica).</summary>
+    public static JsonObject ObtenerPlantillaDetalle(string regla) =>
+        PlantillaDetalleBase.Value.DeepClone().AsObject();
+
+    public static bool ExisteCaso(string casoId) => DetallesPorCaso.Value.ContainsKey(casoId);
+
+    /// <summary>Registro del caso con los datos de cada aplicativo (null si no existe).</summary>
+    public static JsonObject? ObtenerDetalleCaso(string casoId) =>
+        DetallesPorCaso.Value[casoId]?.DeepClone().AsObject();
+
+    /// <summary>Historial de cambios del caso, sin paginación: todas las filas en una sola página.</summary>
+    public static PaginaHistorial ObtenerHistorialCaso(string casoId)
+    {
+        var filas = HistorialPorCaso.Value[casoId]?.AsArray()
+            .Select(f => f!.DeepClone().AsObject()).ToList() ?? [];
+        return new PaginaHistorial
+        {
+            PageNumber = 1,
+            PageSize = Math.Max(filas.Count, 1),
+            TotalRows = filas.Count,
+            TotalPages = filas.Count == 0 ? 0 : 1,
+            Rows = filas
+        };
     }
 
     private sealed record Columna(string Id, string Label, string Ruta, string SortType, bool Ordenable);
