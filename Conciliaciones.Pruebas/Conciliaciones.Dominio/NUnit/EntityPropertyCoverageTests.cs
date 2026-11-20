@@ -114,9 +114,12 @@ namespace Conciliaciones.Pruebas.Conciliaciones.Dominio.NUnit
         [Test]
         public void ConciliacionEstados_NormalizeOrThrow_AllowsKnownAndRejectsUnknown()
         {
-            ConciliacionEstados.NormalizeOrThrow(null).Should().Be("pendiente");
-            ConciliacionEstados.NormalizeOrThrow("  Resuelto  ").Should().Be(ConciliacionEstados.Resuelto);
-            ConciliacionEstados.NormalizeOrThrow("PENDIENTE").Should().Be("pendiente");
+            // Sin estado se asume VALIDANDO; los conocidos se devuelven en su forma canónica.
+            ConciliacionEstados.NormalizeOrThrow(null).Should().Be(ConciliacionEstados.validando);
+            ConciliacionEstados.NormalizeOrThrow("   ").Should().Be(ConciliacionEstados.validando);
+            ConciliacionEstados.NormalizeOrThrow("  con_novedad  ").Should().Be(ConciliacionEstados.con_novedad);
+            ConciliacionEstados.NormalizeOrThrow("Datos_Incompletos").Should().Be(ConciliacionEstados.datos_incompletos);
+            ConciliacionEstados.NormalizeOrThrow("ERROR_EVALUACION").Should().Be(ConciliacionEstados.error_evaluacion);
 
             Action act = () => ConciliacionEstados.NormalizeOrThrow("inventado");
             act.Should().Throw<DomainValidationException>()
