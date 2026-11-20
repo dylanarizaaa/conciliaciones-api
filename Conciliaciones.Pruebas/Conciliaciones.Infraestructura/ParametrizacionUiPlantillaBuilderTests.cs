@@ -52,6 +52,8 @@ namespace Conciliaciones.Pruebas.Conciliaciones.Infraestructura.Persistence.Docu
             Assert.AreEqual("DateCell", columns[2]["cell"]["component"].AsString);
             Assert.AreEqual("CurrencyCell", columns[3]["cell"]["component"].AsString);
             Assert.AreEqual("estado", columns[4]["id"].AsString);
+            Assert.AreEqual("estadoConciliacion", columns[4]["accessorKey"].AsString);
+            Assert.IsTrue(columns[4]["cell"]["inputs"]["variants"].AsBsonDocument.Contains("CON_NOVEDAD"));
             Assert.AreEqual("accion", columns[5]["id"].AsString);
             Assert.AreEqual("/Conciliaciones/subprocesos", table["blocks"][0]["dataSource"]["path"].AsString);
         }

@@ -38,7 +38,7 @@ namespace Conciliaciones.Infraestructura.Persistence.Documents.Factories
                 columns.Add(DataColumn(columnas[i], i == 0));
             }
 
-            columns.Add(EstadoColumn());
+            columns.Add(PlantillaEstadoColumna.Build());
             columns.Add(AccionColumn());
 
             return new BsonDocument
@@ -265,44 +265,6 @@ namespace Conciliaciones.Infraestructura.Persistence.Documents.Factories
                 { "enableHiding", false }
             };
 
-        private static BsonDocument EstadoColumn() =>
-            new()
-            {
-                { "id", "estado" },
-                { "accessorKey", "estado" },
-                { "header", SortHeader("Estado") },
-                {
-                    "cell",
-                    new BsonDocument
-                    {
-                        { "component", "BadgeCell" },
-                        {
-                            "inputs",
-                            new BsonDocument
-                            {
-                                {
-                                    "variants",
-                                    new BsonDocument
-                                    {
-                                        { "Fallido", new BsonDocument { { "label", "Fallido" }, { "tone", "danger" } } },
-                                        { "EN_GESTION", new BsonDocument { { "label", "En gestión" }, { "tone", "info" } } },
-                                        { "RESUELTO", new BsonDocument { { "label", "Resuelto" }, { "tone", "success" } } }
-                                    }
-                                },
-                                {
-                                    "fallback",
-                                    new BsonDocument { { "label", "Sin estado" }, { "tone", "neutral" } }
-                                }
-                            }
-                        }
-                    }
-                },
-                { "meta", new BsonDocument("width", 206) },
-                { "enableSorting", true },
-                { "sortType", "text" },
-                { "pin", "end" }
-            };
-
         private static BsonDocument AccionColumn() =>
             new()
             {
@@ -502,7 +464,8 @@ namespace Conciliaciones.Infraestructura.Persistence.Documents.Factories
             };
         }
 
-        private static string FieldId(string fuenteDato)
+        /// <summary>Alias de un campo (último tramo tras el punto): es el accessorKey de la plantilla.</summary>
+        internal static string FieldId(string fuenteDato)
         {
             string trimmed = fuenteDato.Trim();
             int dot = trimmed.LastIndexOf('.');

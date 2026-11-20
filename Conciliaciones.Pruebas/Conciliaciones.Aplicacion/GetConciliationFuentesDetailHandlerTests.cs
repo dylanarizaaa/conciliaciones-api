@@ -42,12 +42,12 @@ namespace Conciliaciones.Pruebas.Conciliaciones.Aplicacion.Features.Conciliation
 
             List<DatoDetalleDto> datosFuente = new List<DatoDetalleDto>
             {
-                new DatoDetalleDto("Factura Id", "number", 2)
+                new DatoDetalleDto("FacturaId", "Factura Id", "number", 2)
             };
 
             List<FuenteDetalleDto> fuentesMock = new List<FuenteDetalleDto>
             {
-                new FuenteDetalleDto("fuenteFacturas", datosFuente)
+                new FuenteDetalleDto("fuenteFacturas", "fuenteFacturas", datosFuente)
             };
 
             _conciliationRepositoryMock

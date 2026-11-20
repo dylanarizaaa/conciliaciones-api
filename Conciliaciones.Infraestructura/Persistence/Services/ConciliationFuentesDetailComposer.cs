@@ -1,7 +1,9 @@
 using Conciliaciones.Dominio.DTOs.Response.Conciliation;
 using Conciliaciones.Infraestructura.Persistence.Documents;
+using Conciliaciones.Infraestructura.Persistence.Documents.Factories;
 using Conciliaciones.Infraestructura.Persistence.Documents.Projections;
 using Conciliaciones.Infraestructura.Ports.Interfaces.Persistence;
+using MongoDB.Bson;
 
 namespace Conciliaciones.Infraestructura.Persistence.Services
 {
@@ -68,7 +70,7 @@ namespace Conciliaciones.Infraestructura.Persistence.Services
                 datosDetails.AddRange(uiColumns.Select(col => MapDato(col, dataFirstDoc)));
             }
 
-            return new FuenteDetalleDto(nombreConcatenado, datosDetails);
+            return new FuenteDetalleDto(fuenteId, nombreConcatenado, datosDetails);
         }
 
         private static DatoDetalleDto MapDato(UiColumnDocument colConfig, Dictionary<string, object>? dataFirstDoc)
@@ -85,7 +87,38 @@ namespace Conciliaciones.Infraestructura.Persistence.Services
                 valorFinal = raw;
             }
 
-            return new DatoDetalleDto(headerName, typeName, valorFinal);
+            // El id es el mismo alias que la plantilla usa como accessorKey de la columna.
+            return new DatoDetalleDto(
+                ParametrizacionUiPlantillaBuilder.FieldId(fieldName),
+                headerName,
+                typeName,
+                ValorEscalar(valorFinal));
+        }
+
+        /// <summary>
+        /// Mongo entrega los decimales como <see cref="Decimal128"/> (y otros tipos BSON propios), que
+        /// System.Text.Json serializa como <c>{}</c>. El front espera texto, número, booleano o null.
+        /// </summary>
+        private static object? ValorEscalar(object? valor) => valor switch
+        {
+            null => null,
+            Decimal128 decimal128 => ANumero(decimal128),
+            ObjectId objectId => objectId.ToString(),
+            BsonNull => null,
+            BsonValue bsonValue => ValorEscalar(BsonTypeMapper.MapToDotNetValue(bsonValue)),
+            _ => valor
+        };
+
+        private static object ANumero(Decimal128 valor)
+        {
+            try
+            {
+                return Decimal128.ToDecimal(valor);
+            }
+            catch (OverflowException)
+            {
+                return Decimal128.ToDouble(valor);
+            }
         }
     }
 }

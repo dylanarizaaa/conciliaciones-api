@@ -1,5 +1,6 @@
 using Conciliaciones.Dominio.Ports.Interfaces.Conciliations;
 using Conciliaciones.Infraestructura.Persistence.DocumentDb.Builders;
+using Conciliaciones.Infraestructura.Persistence.Documents.Factories;
 using Conciliaciones.Infraestructura.Persistence.DocumentDb.Constants;
 using Conciliaciones.Infraestructura.Ports.Interfaces.DBContext;
 using MongoDB.Bson;
@@ -43,7 +44,14 @@ namespace Conciliaciones.Infraestructura.Persistence.Repositories
                 return null;
             }
 
-            return doc.Plantilla[tipoBlock].ToJson();
+            BsonValue plantilla = doc.Plantilla[tipoBlock];
+            if (tipoBlock == "table" && plantilla.IsBsonDocument)
+            {
+                // Plantillas ya guardadas: columna de estado con el campo y las variantes reales.
+                PlantillaEstadoColumna.Aplicar(plantilla.AsBsonDocument);
+            }
+
+            return plantilla.ToJson();
         }
 
         [BsonIgnoreExtraElements]

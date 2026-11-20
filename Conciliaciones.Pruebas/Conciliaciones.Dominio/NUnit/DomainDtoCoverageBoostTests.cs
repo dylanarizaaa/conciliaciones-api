@@ -145,10 +145,12 @@ namespace Conciliaciones.Pruebas.Conciliaciones.Dominio.NUnit
             PagedRowsDto rows = new(1, 1m, 1, 1, 1, 10, new List<Dictionary<string, object?>>());
             rows.PageSize.Should().Be(10);
 
-            DatoDetalleDto dato = new("n", "string", 1);
+            DatoDetalleDto dato = new("id", "n", "string", 1);
+            dato.Id.Should().Be("id");
             dato.Tipo.Should().Be("string");
             dato.Valor.Should().Be(1);
-            FuenteDetalleDto fuente = new("f", new List<DatoDetalleDto> { dato });
+            FuenteDetalleDto fuente = new("fuenteId", "f", new List<DatoDetalleDto> { dato });
+            fuente.Id.Should().Be("fuenteId");
             fuente.Datos.Should().ContainSingle();
 
             FailedRuleDto failed = new("id-r", "r", 1, 2m);
