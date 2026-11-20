@@ -1,0 +1,635 @@
+[{
+  "_id": {
+    "$oid": "6acf906a47f34270cefbdc2d"
+  },
+  "idParametrizacion": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fuente": [
+    {
+      "field": "fuenteFacturas.FacturaId",
+      "header": "Factura Id",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "fuenteFacturas.NumeroFactura",
+      "header": "Número de Factura",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "fuenteFacturas.MontoTotal",
+      "header": "Monto total",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "currency",
+        "config": {
+          "currencyCode": "COP",
+          "display": "symbol",
+          "digitsInfo": "1.0-2",
+          "locale": "es-CO",
+          "symbol": "$"
+        }
+      }
+    },
+    {
+      "field": "fuenteFacturas.FechaEmision",
+      "header": "Monto total",
+      "sortable": true,
+      "visible": true,
+      "order": 4,
+      "cellConfig": {
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      }
+    },
+    {
+      "field": "fuenteFacturas.ClienteId",
+      "header": "Id Cliente ",
+      "sortable": true,
+      "visible": true,
+      "order": 5,
+      "cellConfig": {
+        "type": "text"
+      }
+    },
+    {
+      "field": "fuentePagos.PagoId",
+      "header": "Pago Id",
+      "sortable": true,
+      "visible": true,
+      "order": 6,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "fuentePagos.Monto",
+      "header": "Monto Pagado",
+      "sortable": true,
+      "visible": true,
+      "order": 7,
+      "cellConfig": {
+        "type": "currency",
+        "config": {
+          "currencyCode": "COP",
+          "display": "symbol",
+          "digitsInfo": "1.0-2",
+          "locale": "es-CO",
+          "symbol": "$"
+        }
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 8,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 9,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteFacturas",
+      "columns": [
+        {
+          "field": "FacturaId",
+          "header": "Factura Id",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        },
+        {
+          "field": "NumeroFactura",
+          "header": "Número de Factura",
+          "sortable": true,
+          "visible": true,
+          "order": 2,
+          "cellConfig": {
+            "type": "number"
+          }
+        },
+        {
+          "field": "MontoTotal",
+          "header": "Monto total",
+          "sortable": true,
+          "visible": true,
+          "order": 3,
+          "cellConfig": {
+            "type": "currency",
+            "config": {
+              "currencyCode": "COP",
+              "display": "symbol",
+              "digitsInfo": "1.0-2",
+              "locale": "es-CO",
+              "symbol": "$"
+            }
+          }
+        },
+        {
+          "field": "FechaEmision",
+          "header": "Monto total",
+          "sortable": true,
+          "visible": true,
+          "order": 3,
+          "cellConfig": {
+            "type": "date",
+            "format": "YYYY-MM-DD"
+          }
+        },
+        {
+          "field": "ClienteId",
+          "header": "Id Cliente ",
+          "sortable": true,
+          "visible": true,
+          "order": 4,
+          "cellConfig": {
+            "type": "text"
+          }
+        }
+      ]
+    },
+    {
+      "idFuente": "fuentePagos",
+      "columns": [
+        {
+          "field": "PagoId",
+          "header": "Pago Id",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        },
+        {
+          "field": "MontoPagado",
+          "header": "Monto Pagado",
+          "sortable": true,
+          "visible": true,
+          "order": 2,
+          "cellConfig": {
+            "type": "currency",
+            "config": {
+              "currencyCode": "COP",
+              "display": "symbol",
+              "digitsInfo": "1.0-2",
+              "locale": "es-CO",
+              "symbol": "$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adbc65d361681f6da274829"
+  },
+  "idParametrizacion": "52a7c9c9-337a-4312-9256-4663ad2394c4",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adbc75c361681f6da27482b"
+  },
+  "idParametrizacion": "c0809acd-b41c-4d1a-a691-0156245f34d4",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adbc75f361681f6da27482d"
+  },
+  "idParametrizacion": "259deeab-e578-4090-b78c-d7f3106b29ac",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adbc763361681f6da27482f"
+  },
+  "idParametrizacion": "a0abcb86-ce34-44f2-b2eb-5bbf6c1adbcd",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adbc843a36a8e6aeec2edfe"
+  },
+  "idParametrizacion": "1cad31ee-be61-4333-9b36-2b05a30e240e",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adbca68ec0b50f36da59507"
+  },
+  "idParametrizacion": "c064a3c1-2dd6-41c8-8614-b33c3789e139",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adca6aac51ae2b2cb07c31d"
+  },
+  "idParametrizacion": "4e3b8942-7633-4399-9754-d8bd1d95dfde",
+  "fuente": [
+    {
+      "field": "fuentePortalClientes.numDocPortal",
+      "header": " Numero documento cliente portal",
+      "sortable": true,
+      "visible": true,
+      "order": 1,
+      "cellConfig": {
+        "type": "number"
+      }
+    },
+    {
+      "field": "estado",
+      "header": "Estado",
+      "sortable": true,
+      "visible": true,
+      "order": 2,
+      "cellConfig": {
+        "type": "badge",
+        "variantByValue": {
+          "Pendiente": "destructive",
+          "En revisión": "outline",
+          "Resuelto": "secondary"
+        }
+      }
+    },
+    {
+      "field": "accion",
+      "header": "Acción",
+      "sortable": true,
+      "visible": true,
+      "order": 3,
+      "cellConfig": {
+        "type": "select-row"
+      }
+    }
+  ],
+  "datos": [
+    {
+      "idFuente": "fuenteNovasoftCuenta",
+      "columns": [
+        {
+          "field": "fuentePrepagoCliente.numDocPrepago",
+          "header": "Números",
+          "sortable": true,
+          "visible": true,
+          "order": 1,
+          "cellConfig": {
+            "type": "number"
+          }
+        }
+      ]
+    }
+  ]
+}]

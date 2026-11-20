@@ -1,0 +1,393 @@
+[{
+  "_id": {
+    "$oid": "6acf92cb47f34270cefbdc4e"
+  },
+  "conciliacionId": "aafa05df-cf84-4365-a5d0-2eee83c14454",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": "2026-10-06T10:05:00Z",
+  "estado": "fallido",
+  "parametrosEntrada": {
+    "idFactura": "2",
+    "idPago": "9002",
+    "campoExtraDinamico": "valor_cualquiera"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuenteFacturas",
+      "conexionId": "idConexionCliente",
+      "data": [
+        {
+          "FacturaId": 2,
+          "NumeroFactura": 54545,
+          "MontoTotal": 545454,
+          "FechaEmision": "2026-10-06T08:00:00Z",
+          "ClienteId": "55454"
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "PagoId": 9002,
+          "Monto": 545454
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {
+    "diferenciaController": 0,
+    "diferenciaNovasoft": 4454,
+    "diferencia": 4454
+  },
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": true,
+    "eventoExito": "MONTO_COINCIDE",
+    "mensajeError": null
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad927527bff0f587524ac1b"
+  },
+  "conciliacionId": "5a7356f7-f8ef-4009-a981-5aebcf4eb1f1",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:57:48.436Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "10",
+    "idPago": "903402"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad9276c7bff0ff3db0c18a9"
+  },
+  "conciliacionId": "ec839bdd-01d7-4b44-87b2-f25cadd4806f",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:58:20.646Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "11",
+    "idPago": "9023402"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad9276f7bff0ff3db0c18ac"
+  },
+  "conciliacionId": "5196945d-6249-42c8-bd6b-efebecb7a6b2",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:58:23.132Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "52",
+    "idPago": "9005672"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad927717bff0ff3db0c18ae"
+  },
+  "conciliacionId": "fdf4e31e-802b-4b0f-b2cd-5bd9aa805c06",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:58:25.682Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "15",
+    "idPago": "90234"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad927777bff0ff3db0c18af"
+  },
+  "conciliacionId": "2197c9f4-4b3c-40e6-b497-deaf277eb14d",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:58:30.970Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "10",
+    "idPago": "903402"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad927797bff0ff3db0c18b0"
+  },
+  "conciliacionId": "989415ac-ea15-4a7d-a4ea-7b5c4ac606e7",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:58:33.025Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "10",
+    "idPago": "903402"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad9277b7bff0ff3db0c18b1"
+  },
+  "conciliacionId": "bac61c0d-598a-4826-91b6-c22bf700997a",
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "fechaCreacion": {
+    "$date": "2026-10-21T20:58:35.419Z"
+  },
+  "estado": "Fallido",
+  "parametrosEntrada": {
+    "idFactura": "2",
+    "idPago": "9002"
+  },
+  "resultadoFuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "pagoId": 998877,
+          "monto": 150000
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "data": [
+        {
+          "idNovasoft": 123,
+          "valorNovasoft": {
+            "_t": "System.Decimal",
+            "_v": {
+              "$numberDecimal": "150000.50"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resultadoTransformacion": {},
+  "resultadoRegla": {
+    "nombreRegla": "ValidacionMontoExacto",
+    "cumplida": false,
+    "eventoExito": null,
+    "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado."
+  }
+}]

@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6acf90d447f34270cefbdc39"
+  },
+  "idProyecto": "b67a7c53-68cd-4c20-ba6c-6165edfd7814",
+  "idProceso": "09f12723-a85a-4d28-9520-25fa6fee7b04",
+  "nombre": "Ventas"
+},
+{
+  "_id": {
+    "$oid": "6adbc3120c776b1d64fbabd6"
+  },
+  "idProceso": "143d2a7d-7ce4-4967-89b9-c72ec3ecadfe",
+  "idProyecto": "3213d06a-eac8-4f47-9c43-6850a04789a8",
+  "nombre": "nuevo1",
+  "fechaCreacion": "2026-10-23T20:26:58.2513553Z"
+}]

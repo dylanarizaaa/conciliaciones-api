@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "6ad27c0966774c9b9704cb54"
+  },
+  "parametrizacionId": "e48474f6-0706-48d8-a1b8-bd8002923d43",
+  "subProcesoId": "aafa05df-cf84-4365-a5d0-2eee83c14a15",
+  "fechaCreacion": "2026-10-06T09:00:00Z",
+  "parametros": [
+    {
+      "nombre": "idFactura",
+      "tipo": "string"
+    },
+    {
+      "nombre": "idPago",
+      "tipo": "string"
+    }
+  ],
+  "fuentes": [
+    {
+      "fuenteId": "fuentePagos",
+      "conexionId": "idConexionPagos",
+      "tabla": "PagosRegistrados",
+      "camposSeleccion": [
+        {
+          "nombre": "PagoId",
+          "tipoDato": "number",
+          "alias": "pagoId"
+        },
+        {
+          "nombre": "MontoPagado",
+          "tipoDato": "number",
+          "alias": "monto"
+        }
+      ],
+      "filtros": [
+        {
+          "operador": "AND",
+          "condiciones": [
+            {
+              "campo": "IdFactura",
+              "operador": "EQUALS",
+              "valor": "parametros.idFactura"
+            },
+            {
+              "campo": "IdPago",
+              "operador": "EQUALS",
+              "valor": "parametros.idPago"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePagosNov",
+      "conexionId": "idConexionPagos",
+      "tabla": "PagosRegistrados",
+      "camposSeleccion": [
+        {
+          "nombre": "IdNovasoft",
+          "tipoDato": "number",
+          "alias": "idNovasoft"
+        },
+        {
+          "nombre": "ValorNovasoft",
+          "tipoDato": "number",
+          "alias": "valorNovasoft"
+        }
+      ],
+      "filtros": [
+        {
+          "operador": "AND",
+          "condiciones": [
+            {
+              "campo": "IdFactura",
+              "operador": "EQUALS",
+              "valor": "parametros.idFactura"
+            },
+            {
+              "campo": "Pagos",
+              "operador": "EQUALS",
+              "valor": "fuentePagos.pagoId"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transformacion": [
+    {
+      "alias": "diferenciaController",
+      "tipo": "number",
+      "operacion": "resta",
+      "operandos": [
+        {
+          "ref": "fuentePagosNov.valorNovasoft"
+        },
+        {
+          "ref": "fuentePagos.monto"
+        }
+      ]
+    }
+  ],
+  "reglas": [
+    {
+      "id": "aafa05df-cf84-4365-a5d0-2eee83c14a15",
+      "nombreRegla": "ValidacionMontoExacto",
+      "eventoExito": "MONTO_COINCIDE",
+      "mensajeError": "El monto de la factura no coincide con el monto del artículo pagado.",
+      "expresion": "fuentePagos.monto == fuentePagosNov.valorNovasoft"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6adca6aac51ae2b2cb07c31c"
+  },
+  "parametros": [
+    {
+      "nombre": "numDocParm",
+      "tipo": "string"
+    }
+  ],
+  "fuentes": [
+    {
+      "fuenteId": "fuentePortalClientes",
+      "conexionId": "CONN-PORTALCLIENTES-MYSQL-01",
+      "tabla": "Contactos_CLI",
+      "camposSeleccion": [
+        {
+          "nombre": "CON_numeroDocumento",
+          "tipoDato": "string",
+          "alias": "numDocPortal"
+        },
+        {
+          "nombre": "CON_nombres",
+          "tipoDato": "string",
+          "alias": "nombresPortal"
+        },
+        {
+          "nombre": "CON_apellidos",
+          "tipoDato": "string",
+          "alias": "apellidosPortal"
+        }
+      ],
+      "filtros": [
+        {
+          "operador": "AND",
+          "condiciones": [
+            {
+              "campo": "IdFactura",
+              "operador": "EQUALS",
+              "valor": "parametros.idFactura"
+            },
+            {
+              "campo": "IdPago",
+              "operador": "EQUALS",
+              "valor": "parametros.idPago"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fuenteId": "fuentePrepagoCliente",
+      "conexionId": "CONN-PREPAGO-MYSQL-01",
+      "tabla": "Cliente_PRP",
+      "camposSeleccion": [
+        {
+          "nombre": "CPP_NumeroDocumento",
+          "tipoDato": "string",
+          "alias": "numDocPrepago"
+        },
+        {
+          "nombre": "CPP_PrimerNombre",
+          "tipoDato": "string",
+          "alias": "primerNombrePrepago"
+        },
+        {
+          "nombre": "CPP_SegundoNombre",
+          "tipoDato": "string",
+          "alias": "segundoNombrePrepago"
+        },
+        {
+          "nombre": "CPP_PrimerApellido",
+          "tipoDato": "string",
+          "alias": "primerApellidoPrepago"
+        },
+        {
+          "nombre": "CPP_SegundoApellido",
+          "tipoDato": "string",
+          "alias": "segundoApellidoPrepago"
+        }
+      ],
+      "filtros": [
+        {
+          "operador": "AND",
+          "condiciones": [
+            {
+              "campo": "IdFactura",
+              "operador": "EQUALS",
+              "valor": "parametros.idFactura"
+            },
+            {
+              "campo": "IdPago",
+              "operador": "EQUALS",
+              "valor": "parametros.idPago"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transformacion": [
+    {
+      "alias": "diferenciaController",
+      "tipo": "number",
+      "operacion": "resta",
+      "operandos": [
+        {
+          "ref": "fuentePortalClientes.numDocPortal"
+        },
+        {
+          "ref": "fuentePrepagoCliente.numDocPrepago"
+        }
+      ]
+    }
+  ],
+  "reglas": [
+    {
+      "id": "4e3b8942-7633-4399-9754-d8bd1d95dfde",
+      "nombreRegla": "ValidacionNombreConsolidado",
+      "eventoExito": "Sin diferencia",
+      "mensajeError": "Diferencia en Nombre",
+      "expresion": "(fuentePortalClientes.nombresPortal + ' ' + fuentePortalClientes.apellidosPortal).trim().toUpperCase() == (fuentePrepagoCliente.primerNombrePrepago + ' ' + fuentePrepagoCliente.segundoNombrePrepago + ' ' + fuentePrepagoCliente.primerApellidoPrepago + ' ' + fuentePrepagoCliente.segundoApellidoPrepago).replaceAll('\\s+', ' ').trim().toUpperCase() && (fuentePortalClientes.nombresPortal + ' ' + fuentePortalClientes.apellidosPortal).trim().toUpperCase() == fuenteController.nombreController.trim().toUpperCase() && (fuentePortalClientes.nombresPortal + ' ' + fuentePortalClientes.apellidosPortal).trim().toUpperCase() == (fuentePagoEnCasa.primerNombrePEC + ' ' + fuentePagoEnCasa.segundoNombrePEC + ' ' + fuentePagoEnCasa.primerApellidoPEC + ' ' + fuentePagoEnCasa.segundoApellidoPEC).replaceAll('\\s+', ' ').trim().toUpperCase() && (fuentePortalClientes.nombresPortal + ' ' + fuentePortalClientes.apellidosPortal).trim().toUpperCase() == fuenteNovasoftProvee.nombreNovasoft.trim().toUpperCase()"
+    }
+  ],
+  "parametrizacionId": "4e3b8942-7633-4399-9754-d8bd1d95dfde",
+  "subProcesoId": "fba8a480-2d47-4779-9aee-e01bbbf7b0f9",
+  "fechaCreacion": "2026-10-24T12:38:02.3520270Z"
+}]

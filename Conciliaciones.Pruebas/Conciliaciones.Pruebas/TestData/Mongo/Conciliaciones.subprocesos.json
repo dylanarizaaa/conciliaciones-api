@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6acf91f247f34270cefbdc3c"
+  },
+  "idProceso": "09f12723-a85a-4d28-9520-25fa6fee7b04",
+  "idSubProceso": "aafa05df-cf84-4365-a5d0-2eee83c14a15",
+  "nombre": "ventas a creditooo"
+},
+{
+  "_id": {
+    "$oid": "6adbc3120c776b1d64fbabd7"
+  },
+  "idSubProceso": "fba8a480-2d47-4779-9aee-e01bbbf7b0f9",
+  "idProceso": "143d2a7d-7ce4-4967-89b9-c72ec3ecadfe",
+  "nombre": "nuevo3",
+  "fechaCreacion": "2026-10-23T20:26:58.5293991Z"
+}]
